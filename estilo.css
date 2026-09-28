@@ -1,0 +1,107 @@
+:root {
+  --cor-fundo: #eaf0f6;
+  --cor-texto: #1f2937;
+  --cor-x: #2563eb;          /* azul */
+  --cor-o: #db2777;          /* rosa */
+  --cor-casa: #ffffff;
+  --cor-casa-hover: #f1f5f9;
+  --cor-vencedora: #fef08a;  /* amarelo claro */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: system-ui, Arial, sans-serif;
+}
+
+main {
+  width: 100%;
+  max-width: 380px;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 8px;
+}
+
+/* Mensagem (vez do jogador, vitória, empate) */
+#mensagem {
+  min-height: 1.5em;     
+  margin: 0 0 16px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Tabuleiro*/
+#tabuleiro {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  
+  gap: 8px;
+}
+
+.casa {
+  aspect-ratio: 1;        
+  border: none;
+  border-radius: 8px;
+  background-color: var(--cor-casa);
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.casa:hover {
+  background-color: var(--cor-casa-hover);
+}
+
+
+.casa.x {
+  color: var(--cor-x);
+}
+
+.casa.o {
+  color: var(--cor-o);
+}
+
+
+.casa.vencedora {
+  background-color: var(--cor-vencedora);
+}
+
+
+.botoes {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.botoes button {
+  padding: 10px 16px;
+  border: 2px solid var(--cor-texto);
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--cor-texto);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.botoes button:hover {
+  background-color: var(--cor-texto);
+  color: var(--cor-fundo);
+}
+
+
+button:focus-visible {
+  outline: 3px solid var(--cor-x);
+  outline-offset: 2px;
+}

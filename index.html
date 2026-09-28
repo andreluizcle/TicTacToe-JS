@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jogo da Velha</title>
+  <link rel="stylesheet" href="estilo.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Jogo da Velha</h1>
+
+    <!-- Aqui aparece de quem é a vez, quem venceu ou se deu empate -->
+    <p id="mensagem" aria-live="polite"></p>
+
+    <!-- Tabuleiro: 9 casas, da esquerda para a direita, de cima para baixo -->
+    <div id="tabuleiro">
+      <button class="casa" type="button" aria-label="Casa 1"></button>
+      <button class="casa" type="button" aria-label="Casa 2"></button>
+      <button class="casa" type="button" aria-label="Casa 3"></button>
+      <button class="casa" type="button" aria-label="Casa 4"></button>
+      <button class="casa" type="button" aria-label="Casa 5"></button>
+      <button class="casa" type="button" aria-label="Casa 6"></button>
+      <button class="casa" type="button" aria-label="Casa 7"></button>
+      <button class="casa" type="button" aria-label="Casa 8"></button>
+      <button class="casa" type="button" aria-label="Casa 9"></button>
+    </div>
+
+    <div class="botoes">
+      <button id="botao-novo-jogo" type="button">Novo jogo</button>
+      <button id="botao-trocar-jogadores" type="button">Trocar jogadores</button>
+    </div>
+  </main>
+</body>
+</html>
